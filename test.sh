@@ -48,6 +48,8 @@ localhost:8443 {
           respond "Hello, world!"
 }
 EOF
+caddy fmt "${certdir}/Caddyfile"
+caddy stop || true
 caddy start --config "${certdir}/Caddyfile"
 
 # And connect to it...
