@@ -43,12 +43,15 @@ cat "${certdir}/localhost.pem"
 
 # Start an HTTPS server...
 cat <<EOF > "${certdir}/Caddyfile"
+{
+    auto_https off
+}
 localhost:8443 {
-          tls ${certdir}/localhost.pem ${certdir}/localhost.pem
-          respond "Hello, world!"
+    tls ${certdir}/localhost.pem ${certdir}/localhost.pem
+    respond "Hello, world!"
 }
 EOF
-caddy fmt "${certdir}/Caddyfile"
+caddy fmt --overwrite "${certdir}/Caddyfile"
 caddy stop || true
 caddy start --config "${certdir}/Caddyfile"
 
