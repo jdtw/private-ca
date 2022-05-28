@@ -1,3 +1,3 @@
-module github.com/jdtw/private-ca
+module jdtw.dev/private-ca
 
 go 1.18

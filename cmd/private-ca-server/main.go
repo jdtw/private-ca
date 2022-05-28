@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/jdtw/private-ca/internal/ca"
+	"jdtw.dev/private-ca/internal/ca"
 )
 
 var (

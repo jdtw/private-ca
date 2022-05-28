@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/jdtw/private-ca/internal/ca"
+	"jdtw.dev/private-ca/internal/ca"
 )
 
 var (

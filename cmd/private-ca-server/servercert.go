@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jdtw/private-ca/internal/ca"
+	"jdtw.dev/private-ca/internal/ca"
 )
 
 // serverCert is an ephemeral TLS server certificate, signed by the CA.
