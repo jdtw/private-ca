@@ -62,4 +62,4 @@ certigo connect localhost:8443 \
         --ca "${certdir}/root.pem" \
         --expected-name localhost
 
-
+echo "Tests pass!"

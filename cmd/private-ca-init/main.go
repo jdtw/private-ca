@@ -100,7 +100,7 @@ func main() {
 	}
 
 	rootPath := filepath.Join(*out, "root.pem")
-	root, err := os.Create(rootPath)
+	root, err := os.OpenFile(rootPath, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0444)
 	if err != nil {
 		log.Fatalf("failed to create %q: %v", rootPath, err)
 	}
